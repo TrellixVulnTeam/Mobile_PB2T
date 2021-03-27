@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/onsenui.css">
+    <link rel="stylesheet" href="css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <title>Mobile App</title>
+</head>
+
+<body>
+    <!-- Build a body mass index calculator -->
+    <ons-page>
+        <div style="text-align: center;">
+            <ons-toolbar>
+                <div class="center">Body Mass Index Calculator</div>
+            </ons-toolbar>
+            <div style="margin-top: 100px;">
+                <ons-label>What is your weight (kg) ?</ons-label>
+                <ons-input style="margin-top: 10px;" id="weight" type="number" placeholder="Please specify your weight">
+                </ons-input>
+            </div>
+            <br>
+            <ons-label>What is your height (m) ?</ons-label>
+            <ons-input style="margin-top: 10px;" id="height" type="number" placeholder="Please specify your height">
+            </ons-input>
+            <br>
+            <ons-button style="margin-top: 15px;" onclick="calculate('bmi-dialog')">Calculate</ons-button>
+        </div>
+        <!-- for dialog -->
+        <ons-dialog var="dialog" id='bmi-dialog'>
+            <div style="text-align: center; padding: 10px;">
+              <p>
+                <h5 id="bmi-value"></h5>
+              </p>
+              
+              <p>
+                <ons-button onclick="document.getElementById('bmi-dialog').hide()">Close</ons-button>
+              </p>
+            </div>
+          </ons-dialog>
+    </ons-page>
+
+    <script src="utils.js"></script>
+</body>
+
+</html>
